@@ -1,0 +1,23 @@
+.window-container.draggable + .window-resize-handle {
+  background: transparent;
+  position: absolute;
+  bottom: 0.25rem;
+  right: -0.25rem;
+  padding: 0;
+  cursor: se-resize;
+  transform: scaleX(-1);
+  visibility: visible;
+}
+
+.window-container + .window-resize-handle {
+  visibility: hidden;
+}
+
+.react-grid-item > .react-resizable-handle.react-resizable-handle-se {
+  bottom: 0.25rem;
+  right: -0.25rem;
+}
+
+.react-resizable-handle {
+  background: transparent;
+}

@@ -1,0 +1,32 @@
+.p-tabview {
+  margin: auto;
+  .p-tabview-nav {
+    display: flex;
+
+    .p-tabview-ink-bar {
+      background-color: var(--surface-100);
+    }
+
+    .p-unselectable-text {
+      margin: auto;
+
+      .p-tabview-nav-link {
+        font-family: "Questrial", sans-serif;
+        color: var(--surface-50);
+        font-weight: bolder;
+      }
+    }
+  }
+
+  .p-tabview-panels {
+    .p-tabview-panel {
+      margin: auto;
+      display: flex;
+
+      .tab-panel-container {
+          width:inherit;
+          margin: auto;
+      }
+    }
+  }
+}

@@ -1,17 +1,47 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { render } from "react-dom";
+import { Layout } from "./lib";
+import '@fortawesome/fontawesome-svg-core/styles.css';
+import { fad } from '@fortawesome/pro-duotone-svg-icons';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { IconName, IconPrefix } from "@fortawesome/fontawesome-common-types";
+import ComponentA from './components/componenta';
+import ComponentB from './components/componentb';
+import ComponentC from './components/componentc';
+import ComponentD from './components/componentd';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+const App = () => {
+    library.add(fad);
+    const dockBasicItems = [
+      {
+        label: 'Component A',
+        iconClass: "fad" as IconPrefix,
+        iconName: "file-chart-line" as IconName,
+        child: <ComponentA></ComponentA>
+      },
+      {
+        label: 'Component B',
+        iconClass: "fad" as IconPrefix,
+        iconName: "truck-pickup" as IconName,
+        child: <ComponentB></ComponentB>
+      },
+      {
+        label: 'Component C',
+        iconClass: "fad" as IconPrefix,
+        iconName: "map-marked-alt" as IconName,
+        child: <ComponentC></ComponentC>
+      },
+      {
+        label: 'Component D',
+        iconClass: "fad" as IconPrefix,
+        iconName: "user" as IconName,
+        child: <ComponentD></ComponentD>
+      }
+    ];
+  return( <div>
+    <Layout items={dockBasicItems} />
+  </div>);
+ 
+};
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+render(<App />, document.getElementById("root"));

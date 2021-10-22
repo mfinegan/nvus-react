@@ -1,0 +1,14 @@
+@import url("./../../node_modules/react-grid-layout/css/styles.css");
+
+.visor-container {
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    background-color:var(--surface-100);
+    margin-right:auto;
+    border-color: var(--surface-700);
+    border-style: solid;
+}
+
+.p-dock {
+    position:fixed;
+}

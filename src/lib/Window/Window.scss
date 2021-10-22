@@ -1,0 +1,73 @@
+@import url("./../../../node_modules/react-grid-layout/css/styles.css");
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+
+.window-container {
+
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    background-color: white;
+    margin-left:0.5rem;
+    margin-right:0.5rem;
+    border-color: var(--surface-700);
+    border-style: solid;
+    height:100%;
+    width:100%;
+
+    .window-header {
+        font-family: 'Questrial', sans-serif;
+        background-color: var(--surface-300);
+        display: flex;
+    
+        .window-title {
+            margin-top:auto;
+            margin-bottom:auto;
+            margin-left:0.5rem;
+            font-weight: lighter;
+            color: var(--text-color-secondary);
+        }
+    
+        .window-header-buttons {
+            margin-left:auto;
+            margin-right:0rem;
+            
+            .window-header-button {
+                width:0.5rem;
+                justify-content: center;
+                color: var(--text-color);
+                border:none;
+                margin:auto;
+            }
+
+            .window-header-button.pinned-active {
+                background-color: var(--surface-50);
+            }
+
+            .window-header-button:hover {
+                color: var(--surface-100);
+            }
+        }
+    }
+    
+    .window-body {
+        background-color: var(--surface-800);
+        color: var(--text-color-primary);
+        justify-content: center;
+        align-items: center;
+        display: block;
+        flex-direction: column;
+        margin: auto;
+        height: calc(100% - 2.3rem);
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+    }
+}
+
+
+
+.react-grid-item.react-grid-placeholder {
+    background-color: lime;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+  }
+  
+ 
