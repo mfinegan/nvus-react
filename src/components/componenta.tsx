@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { TabView,TabPanel } from 'primereact/tabview';
 import './componenta.scss';
 
@@ -6,12 +6,6 @@ import './componenta.scss';
 function ComponentA() {
     
     const [activeIndex, setActiveIndex] = useState(0);
-
-    const items = [
-        {label: 'Pantry'},
-        {label: 'Refrigerator'},
-        {label: 'Freezer'},
-    ];
 
     return(
 <div>

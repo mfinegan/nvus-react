@@ -1,12 +1,10 @@
-import React, { useEffect, useState } from "react";
+import { useState } from "react";
 import Visor from './Visor';
 import { ReactGridLayoutComponent } from "./Window/Window";
 import { MenuItemProps } from "./Menu/MenuItem";
 import Menu from "./Menu/Menu";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import 'primereact/resources/themes/md-dark-indigo/theme.css';
-import 'primereact/resources/primereact.min.css';
-import '@fortawesome/fontawesome-svg-core/styles.css';
+
+import './Layout.scss';
 
 type LayoutProps = {
 
@@ -27,10 +25,9 @@ function Layout(props: LayoutProps) {
     const onOpen = (key: string) => {
         let count = items.filter(x => x.i.startsWith(key)).length + 1;
         let keyStr = count === 1 ? key : `${key} (${count})`;
-        let node = menuItems.filter(x=>x.label==key)[0].child;
-        let iconClass = menuItems.filter(x=>x.label==key)[0].iconClass;
-        let iconName = menuItems.filter(x=>x.label===key)[0].iconName;
-        setItems(items.concat({ i: keyStr, x: 1, y: 1, w: 4, h: 4, minW: 4, minH: 4, static: false , child: node, icon: <FontAwesomeIcon icon={[iconClass, iconName]} /> }));
+        let node = menuItems.filter(x=>x.label===key)[0].child;
+        let icon = menuItems.filter(x=>x.label===key)[0].icon;
+        setItems(items.concat({ i: keyStr, x: 1, y: 1, w: 4, h: 4, minW: 4, minH: 4, static: false , child: node, icon: icon }));
     }
     let menuItemToAlter = props.items;
     menuItemToAlter.forEach(item=>{

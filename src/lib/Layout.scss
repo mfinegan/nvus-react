@@ -1,0 +1,16 @@
+@import url('primereact/resources/themes/md-dark-indigo/theme.css');
+@import url('primereact/resources/primereact.min.css');
+@import url('@fortawesome/fontawesome-svg-core/styles.css');
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+
+.icon-container {
+    object-fit: contain;
+    width: 1rem;
+    margin: auto;
+    img,
+    FontAwesomeIcon {
+      width: inherit;
+      margin: auto;
+    }
+  }
+  

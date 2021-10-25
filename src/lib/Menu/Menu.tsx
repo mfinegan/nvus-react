@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import MenuItem, { MenuItemProps } from "./MenuItem";
 import './Menu.scss';
 
@@ -13,7 +13,7 @@ type MenuProps = {
 const GenerateElement = ( el: MenuItemProps) => {
     return (
         <li className={"menu-container-list-item"} key={el.label}>
-            <MenuItem label={el.label} iconClass={el.iconClass} iconName={el.iconName} onClick={el.onClick} child={el.child} />
+            <MenuItem label={el.label} icon={el.icon} onClick={el.onClick} child={el.child} />
         </li>
     );
 }

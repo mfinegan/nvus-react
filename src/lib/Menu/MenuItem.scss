@@ -1,11 +1,13 @@
+@import './../theme';
+
 .menu-item-container {
 
     border-radius: .25rem;
     cursor: pointer;
+    color: $text-color;
     &:hover {
         filter: opacity(1);
-        background: var(--surface-400);
-        color: var(--surface-700);
+        background: $color-secondary-2-3;
     }
 
     svg {

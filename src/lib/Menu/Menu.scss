@@ -1,5 +1,6 @@
+@import './../theme';
 .menu-container {
-    background-color:var(--surface-500);
+    background-color:$color-secondary-2-0;
     display: flex;
 
     .menu-container-list {
@@ -7,10 +8,15 @@
         display: inline-flex;
         width: 100%;
         font-weight: bolder;
+        height: -webkit-fill-available;
 
         .menu-container-list-item {
-            margin-left:auto;
-            margin-right: auto;
+            margin: auto;
+            display: flex;
+
+            .menu-item-container {
+                text-align: center;
+            }
         }
     }
 }

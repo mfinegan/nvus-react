@@ -1,73 +1,88 @@
-@import url("./../../../node_modules/react-grid-layout/css/styles.css");
-@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+@import "../theme";
 
 .window-container {
+  border-bottom-left-radius: 1.1rem;
+  border-bottom-right-radius: 1.1rem;
+  background-color: white;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  //border: rgba($color-secondary-2-0, 0.75) solid;
+  height: 100%;
+  width: 100%;
 
-    border-bottom-left-radius: 1rem;
-    border-bottom-right-radius: 1rem;
-    background-color: white;
-    margin-left:0.5rem;
-    margin-right:0.5rem;
-    border-color: var(--surface-700);
-    border-style: solid;
-    height:100%;
-    width:100%;
+  .window-header {
+    font-family: "Questrial", sans-serif;
+    background-color: rgba($color: $color-secondary-2-0, $alpha: 0.9);
+    display: flex;
 
-    .window-header {
-        font-family: 'Questrial', sans-serif;
-        background-color: var(--surface-300);
-        display: flex;
-    
-        .window-title {
-            margin-top:auto;
-            margin-bottom:auto;
-            margin-left:0.5rem;
-            font-weight: lighter;
-            color: var(--text-color-secondary);
-        }
-    
-        .window-header-buttons {
-            margin-left:auto;
-            margin-right:0rem;
-            
-            .window-header-button {
-                width:0.5rem;
-                justify-content: center;
-                color: var(--text-color);
-                border:none;
-                margin:auto;
-            }
+    .window-title {
+      margin-top: auto;
+      margin-bottom: auto;
+      margin-left: 0.5rem;
+      font-weight: lighter;
+      color: $text-color;
+      display: flex;
+      align-items: center;
 
-            .window-header-button.pinned-active {
-                background-color: var(--surface-50);
-            }
-
-            .window-header-button:hover {
-                color: var(--surface-100);
-            }
-        }
+      .window-title-label {
+        margin-left: 0.75rem;
+      }
     }
-    
-    .window-body {
-        background-color: var(--surface-800);
-        color: var(--text-color-primary);
-        justify-content: center;
-        align-items: center;
-        display: block;
-        flex-direction: column;
+
+    .window-header-buttons {
+      height: 2.42rem;
+      width: 5rem;
+      border-radius: 0;
+      display: flex;
+      margin-left: auto;
+
+      .window-header-button {
+        cursor: pointer;
         margin: auto;
-        height: calc(100% - 2.3rem);
-        border-bottom-left-radius: 1rem;
-        border-bottom-right-radius: 1rem;
+        height: inherit;
+        width: 2.42rem;
+        justify-content: center;
+        background-color: rgba($color: $color-secondary-2-0, $alpha: 0);
+        color: $text-color;
+        border: none;
+        transition: opacity 0.3s linear;
+        opacity: 1;
+
+        &.button-disabled {
+          cursor: default;
+          background-color: rgba($text-color, 0.3);
+          opacity: 0.2;
+          transition: opacity 0.3s linear;
+        }
+
+        &.pinned-active {
+          opacity: 0.75;
+        }
+
+        &:hover {
+          background-color: rgba($color-secondary-2-4, 0.25);
+        }
+      }
     }
-}
+  }
 
-
-
-.react-grid-item.react-grid-placeholder {
-    background-color: lime;
+  .window-body {
+    background-color: rgba($color-secondary-2-0, 0.75);
+    font-family: "Questrial", sans-serif;
+    color: $text-color;
+    justify-content: center;
+    align-items: center;
+    display: block;
+    flex-direction: column;
+    margin: auto;
+    height: calc(100% - 2.4rem);
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
   }
-  
- 
+}
+
+.react-grid-placeholder {
+  background-color: $color-secondary-2-4;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}

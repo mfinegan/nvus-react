@@ -1,9 +1,7 @@
-import React, { ReactNode, useState } from "react";
-
+import React, { ReactNode, useEffect} from "react";
 import './Window.scss';
-import { Button } from 'primereact/button';
+import UseWindow from './Hooks/useWindow';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { JsxElement } from "typescript";
 
 
 export type ReactGridLayoutComponent = {
@@ -28,7 +26,7 @@ type WindowProps = {
     title: string,
 
     /** Child component to render */
-    child: React.ReactNode,
+    child?: React.ReactNode,
 
     /** State characteristics of this window */
     layout: ReactGridLayoutComponent,
@@ -40,37 +38,38 @@ type WindowProps = {
     onClosed: Function
 };
 
-
 function Window({ title, child, layout, onPinned, onClosed }: WindowProps) {
+  
+    const { isOpen, isPinned, toggleOpen, togglePinned} = UseWindow({key:layout.i});
 
-    const [isOpen, setIsOpen] = useState(true);
-    const [isPinned, setIsPinned] = useState(false);
+    useEffect(()=>{
+        if(isPinned)
+            onPinned(layout.i);
+    },[isPinned, layout.i, onPinned]);
 
-    const toggleOpen = () => {
-        setIsOpen(!isOpen);
-        onClosed(layout.i);
-    };
-
-    const togglePinned = () => {
-        setIsPinned(!isPinned);
-        onPinned(layout.i);
-    };
+    useEffect(()=>{
+        if(!isOpen)
+            onClosed(layout.i);
+    },[isOpen, layout.i, onClosed]);
 
     const handleClick = (evt: React.MouseEvent<HTMLButtonElement, MouseEvent>) => { evt.stopPropagation(); };
 
     return (
 
-        <div className={!layout.static ? "window-container draggable " : " window-container"}>
+        <div className={!isPinned ? "window-container draggable " : " window-container"}>
             <div className="window-header p-d-flex">
-                
-                <div className="window-title">{layout.icon} <span>{title.toUpperCase()}</span></div>
+
+                <div className="window-title">
+                    <div className="icon-container">{layout.icon} </div>
+                    <span className="window-title-label">{title.toUpperCase()}</span>
+                </div>
                 <div className="window-header-buttons ">
-                    <Button className={isPinned ? "window-header-button p-button-outlined p-mr-2 pinned-active" : "window-header-button p-button-outlined p-mr-2"} onClick={togglePinned} onMouseDown={e => handleClick(e)}>
+                    <button className={isPinned ? "window-header-button pinned-active" : "window-header-button"} onClick={togglePinned} onMouseDown={e => handleClick(e)}>
                         <FontAwesomeIcon icon={["fad", "thumbtack"]} />
-                    </Button>
-                    <Button className="window-header-button p-button-outlined" onClick={toggleOpen} disabled={isPinned} onMouseDown={e => handleClick(e)}>
+                    </button>
+                    <button className={!isPinned? "window-header-button":"window-header-button button-disabled"} onClick={toggleOpen} disabled={isPinned} onMouseDown={e => handleClick(e)}>
                         <FontAwesomeIcon icon={["fad", "window-close"]} />
-                    </Button>
+                    </button>
                 </div>
             </div>
             <div className="window-body">

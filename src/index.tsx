@@ -4,37 +4,33 @@ import { Layout } from "./lib";
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import { fad } from '@fortawesome/pro-duotone-svg-icons';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { IconName, IconPrefix } from "@fortawesome/fontawesome-common-types";
 import ComponentA from './components/componenta';
 import ComponentB from './components/componentb';
 import ComponentC from './components/componentc';
 import ComponentD from './components/componentd';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const App = () => {
     library.add(fad);
     const dockBasicItems = [
       {
         label: 'Component A',
-        iconClass: "fad" as IconPrefix,
-        iconName: "file-chart-line" as IconName,
+        icon: <FontAwesomeIcon icon={["fad", "file-chart-line"]} />,
         child: <ComponentA></ComponentA>
       },
       {
         label: 'Component B',
-        iconClass: "fad" as IconPrefix,
-        iconName: "truck-pickup" as IconName,
+        icon: <FontAwesomeIcon icon={["fad", "truck-pickup"]} />,
         child: <ComponentB></ComponentB>
       },
       {
         label: 'Component C',
-        iconClass: "fad" as IconPrefix,
-        iconName: "map-marked-alt" as IconName,
+        icon: <img src="./logo192.png" alt="" />,
         child: <ComponentC></ComponentC>
       },
       {
         label: 'Component D',
-        iconClass: "fad" as IconPrefix,
-        iconName: "user" as IconName,
+        icon: <FontAwesomeIcon icon={["fad", "plus"]} />,
         child: <ComponentD></ComponentD>
       }
     ];
