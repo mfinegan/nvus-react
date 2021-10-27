@@ -1,0 +1,7 @@
+#ignore node modules
+node_modules
+
+#Ignore dist
+dist
+.vscode
+public

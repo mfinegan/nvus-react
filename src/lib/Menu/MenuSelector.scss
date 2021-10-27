@@ -1,0 +1,18 @@
+@import './../theme';
+
+.menu-selector-container {
+    width: inherit;
+    display: flex;
+    width: 100%;
+
+    .menu-selector-icons {
+        display: grid;
+        cursor: pointer;
+    }
+
+    .menu-selector-label {
+        margin: auto;
+        display: inline-flex;
+        font-family: $menu-selector-font;
+    }
+}

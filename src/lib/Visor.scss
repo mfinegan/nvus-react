@@ -1,15 +1,9 @@
-@import url("./../../node_modules/react-grid-layout/css/styles.css");
+@import url('./../../node_modules/react-grid-layout/css/styles.css');
 @import './theme';
 
 .visor-container {
-  border-bottom-left-radius: 2rem;
-  border-bottom-right-radius: 2rem;
-  background-color: $color-secondary-2-4;
-  margin-right: auto;
-  
+    border-bottom-left-radius: $visor-bottom-radius;
+    border-bottom-right-radius: $visor-bottom-radius;
+    background-color: $visor-background;
+    margin-right: auto;
 }
-
-.p-dock {
-  position: fixed;
-}
-

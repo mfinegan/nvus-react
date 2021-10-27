@@ -1,12 +1,11 @@
-import React from "react";
+import React from 'react'
 
 function componentD() {
-
-    return(
-<div>
-    <span>Component D!</span>
-</div>
-    );
+    return (
+        <div>
+            <span>Component D!</span>
+        </div>
+    )
 }
 
-export default componentD;
+export default componentD

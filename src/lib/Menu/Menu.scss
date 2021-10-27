@@ -1,12 +1,26 @@
 @import './../theme';
 .menu-container {
-    background-color:$color-secondary-2-0;
+    background-color: $color-secondary-2-0;
     display: flex;
+
+    .menu-container-title-container {
+        display: inline-flex;
+        margin: auto;
+        font-size: 1.5em;
+        margin-left: 1.5rem;
+        color: $text-color;
+        width: $menu-container-title-container-width;
+
+        .menu-container-title-container-title {
+            margin: auto;
+            font-family: $menu-container-title-font;
+        }
+    }
 
     .menu-container-list {
         list-style: none;
         display: inline-flex;
-        width: 100%;
+        width: 100%-$menu-container-title-container-width;
         font-weight: bolder;
         height: -webkit-fill-available;
 

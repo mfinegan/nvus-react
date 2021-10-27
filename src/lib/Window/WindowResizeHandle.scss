@@ -1,30 +1,30 @@
 @import '../theme';
 
 .window-container.draggable + .window-resize-handle {
-  background: transparent;
-  position: absolute;
-  bottom: 0.25rem;
-  right: -0.25rem;
-  padding: 0;
-  cursor: se-resize;
-  transform: scaleX(-1);
-  visibility: visible;
-  color: $text-color;
-  opacity: 0.3;
-  transition: opacity 0.3s linear;
+    background: transparent;
+    position: absolute;
+    bottom: 0.25rem;
+    right: -0.25rem;
+    padding: 0;
+    cursor: se-resize;
+    transform: scaleX(-1);
+    visibility: visible;
+    color: $text-color;
+    opacity: 0.3;
+    transition: $window-button-transition;
 }
 
 .window-container + .window-resize-handle {
-  visibility: hidden;
-  opacity: 0.01;
-  transition: opacity 0.3s linear;
+    visibility: hidden;
+    opacity: 0.01;
+    transition: $window-button-transition;
 }
 
 .react-grid-item > .react-resizable-handle.react-resizable-handle-se {
-  bottom: 0.25rem;
-  right: -0.25rem;
+    bottom: 0.25rem;
+    right: -0.25rem;
 }
 
 .react-resizable-handle {
-  background: transparent;
+    background: transparent;
 }

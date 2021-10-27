@@ -1,22 +1,22 @@
-import { useState, useCallback } from "react";
+import { useState, useCallback } from 'react'
 
 interface UseWindowProps {
-    key: String;
-};
+    key: string
+}
 
-export default function useWindow( props: UseWindowProps) {
-    const [isOpen, setIsOpen] = useState(true);
-    const [isPinned, setIsPinned] = useState(false);
+export default function useWindow(props: UseWindowProps) {
+    const [isOpen, setIsOpen] = useState(true)
+    const [isPinned, setIsPinned] = useState(false)
 
-    const toggleOpen = useCallback(()=>{
-        if( !isPinned) {
-            setIsOpen(!isOpen);
+    const toggleOpen = useCallback(() => {
+        if (!isPinned) {
+            setIsOpen(!isOpen)
         }
-    },[isOpen, isPinned]);
+    }, [isOpen, isPinned])
 
     const togglePinned = useCallback(() => {
-        setIsPinned(!isPinned);
-    }, [isPinned]);
+        setIsPinned(!isPinned)
+    }, [isPinned])
 
-    return {isOpen, isPinned, toggleOpen, togglePinned};
+    return { isOpen, isPinned, toggleOpen, togglePinned }
 }

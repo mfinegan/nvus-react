@@ -1,88 +1,87 @@
-@import "../theme";
+@import '../theme';
 
 .window-container {
-  border-bottom-left-radius: 1.1rem;
-  border-bottom-right-radius: 1.1rem;
-  background-color: white;
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
-  //border: rgba($color-secondary-2-0, 0.75) solid;
-  height: 100%;
-  width: 100%;
+    border-bottom-left-radius: $window-bottom-radius;
+    border-bottom-right-radius: $window-bottom-radius;
+    background-color: $window-bg-color;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    height: 100%;
+    width: 100%;
 
-  .window-header {
-    font-family: "Questrial", sans-serif;
-    background-color: rgba($color: $color-secondary-2-0, $alpha: 0.9);
-    display: flex;
+    .window-header {
+        font-family: $window-header-text;
+        background-color: $window-header-bg-color;
+        display: flex;
 
-    .window-title {
-      margin-top: auto;
-      margin-bottom: auto;
-      margin-left: 0.5rem;
-      font-weight: lighter;
-      color: $text-color;
-      display: flex;
-      align-items: center;
+        .window-title {
+            margin-top: auto;
+            margin-bottom: auto;
+            margin-left: 0.5rem;
+            font-weight: lighter;
+            color: $text-color;
+            display: flex;
+            align-items: center;
 
-      .window-title-label {
-        margin-left: 0.75rem;
-      }
+            .window-title-label {
+                margin-left: 0.75rem;
+            }
+        }
+
+        .window-header-buttons {
+            height: $window-header-buttons-height;
+            width: 5rem;
+            border-radius: 0;
+            display: flex;
+            margin-left: auto;
+
+            .window-header-button {
+                cursor: pointer;
+                margin: auto;
+                height: inherit;
+                width: $window-header-buttons-height;
+                justify-content: center;
+                background-color: $window-header-buttons-bg-color;
+                color: $text-color;
+                border: none;
+                transition: $window-button-transition;
+                opacity: $window-header-buttons-opacity;
+
+                &.button-disabled {
+                    cursor: default;
+                    background-color: $window-button-disabled-bg-color;
+                    opacity: $window-header-button-disabled-opacity;
+                    transition: $window-button-transition;
+                }
+
+                &.pinned-active {
+                    opacity: 0.75;
+                }
+
+                &:hover {
+                    background-color: rgba($color-secondary-2-4, 0.25);
+                }
+            }
+        }
     }
 
-    .window-header-buttons {
-      height: 2.42rem;
-      width: 5rem;
-      border-radius: 0;
-      display: flex;
-      margin-left: auto;
-
-      .window-header-button {
-        cursor: pointer;
-        margin: auto;
-        height: inherit;
-        width: 2.42rem;
-        justify-content: center;
-        background-color: rgba($color: $color-secondary-2-0, $alpha: 0);
+    .window-body {
+        background-color: $window-body-bg-color;
+        font-family: $window-body-text;
         color: $text-color;
-        border: none;
-        transition: opacity 0.3s linear;
-        opacity: 1;
-
-        &.button-disabled {
-          cursor: default;
-          background-color: rgba($text-color, 0.3);
-          opacity: 0.2;
-          transition: opacity 0.3s linear;
-        }
-
-        &.pinned-active {
-          opacity: 0.75;
-        }
-
-        &:hover {
-          background-color: rgba($color-secondary-2-4, 0.25);
-        }
-      }
+        justify-content: center;
+        align-items: center;
+        display: block;
+        flex-direction: column;
+        margin: auto;
+        height: calc(100% - 2.4rem);
+        border-bottom-left-radius: $window-bottom-radius - 0.1rem;
+        border-bottom-right-radius: $window-bottom-radius - 0.1rem;
     }
-  }
-
-  .window-body {
-    background-color: rgba($color-secondary-2-0, 0.75);
-    font-family: "Questrial", sans-serif;
-    color: $text-color;
-    justify-content: center;
-    align-items: center;
-    display: block;
-    flex-direction: column;
-    margin: auto;
-    height: calc(100% - 2.4rem);
-    border-bottom-left-radius: 1rem;
-    border-bottom-right-radius: 1rem;
-  }
 }
 
 .react-grid-placeholder {
-  background-color: $color-secondary-2-4;
-  border-bottom-left-radius: 1rem;
-  border-bottom-right-radius: 1rem;
+    background-color: $color-secondary-2-4;
+    border-bottom-left-radius: $window-bottom-radius;
+    border-bottom-right-radius: $window-bottom-radius;
 }
