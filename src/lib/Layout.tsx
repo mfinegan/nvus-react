@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import Visor from './Visor'
 import useLayout from './Hooks/useLayout'
 import { MenuItemProps } from './Menu/MenuItem'

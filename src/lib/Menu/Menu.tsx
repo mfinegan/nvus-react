@@ -2,17 +2,18 @@ import React from 'react'
 import MenuItem, { MenuItemProps } from './MenuItem'
 import './Menu.scss'
 import MenuSelector from './MenuSelector'
+import { MenuDirection } from './MenuSelector'
 
 type MenuProps = {
     title: string
     /** Array of Menu Items */
     items: MenuItemProps[]
 
-    onArrowClick: Function
-    windowOpen: Function
+    onArrowClick: (dir: MenuDirection, title: string) => void
+    windowOpen: (key: string) => void
 }
 
-const GenerateElement = (el: MenuItemProps, onClick: Function) => {
+const GenerateElement = (el: MenuItemProps, onClick: (key: string) => void) => {
     return (
         <li className={'menu-container-list-item'} key={el.label}>
             <MenuItem

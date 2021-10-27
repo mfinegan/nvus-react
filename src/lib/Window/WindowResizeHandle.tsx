@@ -15,4 +15,6 @@ const BottomRightHandle = React.forwardRef<HTMLDivElement>((props, ref) => {
     )
 })
 
+BottomRightHandle.displayName = 'BottomRightHandle'
+
 export default BottomRightHandle

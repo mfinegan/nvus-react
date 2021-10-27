@@ -9,7 +9,7 @@ export type MenuItemProps = {
     icon: React.ReactNode
 
     /** Function Callback for when Pinned Action is executed */
-    onClick?: Function
+    onClick?: (key: string) => void
 
     child: React.ReactNode
 }
@@ -18,9 +18,9 @@ function MenuItem(props: MenuItemProps) {
     return (
         <div
             className="menu-item-container"
-            onClick={() =>
-                props.onClick ? props.onClick(props.label) : console.log('err')
-            }
+            onClick={() => {
+                if (props.onClick) props.onClick(props.label)
+            }}
         >
             <div className="icon-container"> {props.icon} </div>
             <span className="menu-item-label">{props.label.toUpperCase()}</span>

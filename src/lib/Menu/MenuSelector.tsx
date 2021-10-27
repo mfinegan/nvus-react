@@ -9,7 +9,7 @@ export enum MenuDirection {
 }
 interface MenuSelectorProps {
     title: string
-    onArrowClick: Function
+    onArrowClick: (dir: MenuDirection, title: string) => void
 }
 
 function MenuSelector(props: MenuSelectorProps) {

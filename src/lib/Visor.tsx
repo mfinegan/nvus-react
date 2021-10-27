@@ -10,10 +10,10 @@ type VisorProps = {
     items: ReactGridLayoutComponent[]
 
     /** Function callback for when a window is closed */
-    onClosed: Function
+    onClosed: (key: string) => void
 
     /** Function callback for when a window is pinned */
-    onPinned: Function
+    onPinned: (key: string) => void
 }
 
 /**

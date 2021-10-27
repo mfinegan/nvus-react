@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import { renderHook, act } from '@testing-library/react-hooks'
 import UseWindow from './Hooks/useWindow'
 import Window from './Window'

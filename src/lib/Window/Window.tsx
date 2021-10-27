@@ -30,10 +30,10 @@ type WindowProps = {
     layout: ReactGridLayoutComponent
 
     /** Function Callback for when Pinned Action is executed */
-    onPinned: Function
+    onPinned: (key: string) => void
 
     /** Function callback for when Close Window Action is executed */
-    onClosed: Function
+    onClosed: (key: string) => void
 }
 
 function Window({ title, child, layout, onPinned, onClosed }: WindowProps) {
