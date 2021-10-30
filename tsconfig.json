@@ -16,5 +16,5 @@
         "noEmit": true,
         "jsx": "react-jsx"
     },
-    "include": ["src/lib", "eslintrc.json", "src/*.tsx", "src/*.ts"]
+    "include": ["src/lib", "eslintrc.json", "src/*.tsx", "src/*.ts", "index.tsx"]
 }

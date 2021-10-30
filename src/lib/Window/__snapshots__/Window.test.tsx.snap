@@ -5,7 +5,7 @@ exports[`Render component Test 1`] = `
   className="window-container draggable "
 >
   <div
-    className="window-header p-d-flex"
+    className="window-header"
   >
     <div
       className="window-title"
