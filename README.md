@@ -1,6 +1,6 @@
 <h1 align="center">Welcome to @nvus/nvus-react 👋</h1>
 <p>
-  <img alt="Version" src="https://img.shields.io/badge/version- 0.1.1-blue.svg?cacheSeconds=2592000" />
+  <img alt="Version" src="https://img.shields.io/badge/version- 0.1.2-blue.svg?cacheSeconds=2592000" />
   <a href="https://www.gnu.org/licenses/gpl-3.0.txt" target="_blank">
     <img alt="License: GPL--3.0--only" src="https://img.shields.io/badge/License-GPL--3.0--only-yellow.svg" />
   </a>
