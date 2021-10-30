@@ -2,7 +2,6 @@ import { useState, useCallback } from 'react'
 import { MenuItemProps } from '../Menu/MenuItem'
 import { ReactGridLayoutComponent } from './../Window/Window'
 import { MenuDirection } from './../Menu/MenuSelector'
-import { MenuItemProps } from '../Menu/MenuItem'
 
 /**
  * Javascript Modulo Operator is not friendly when evaluating negative operands

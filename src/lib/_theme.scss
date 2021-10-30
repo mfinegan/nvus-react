@@ -1,50 +1,61 @@
-$color-primary-0: rgba(51, 100, 109, 1); // Main Primary color */
-$color-primary-1: rgba(100, 174, 188, 1);
-$color-primary-2: rgba(78, 138, 149, 1);
-$color-primary-3: rgba(31, 66, 72, 1);
-$color-primary-4: rgba(18, 42, 47, 1);
-
-$color-secondary-1-0: rgba(69, 143, 65, 1); // Main Secondary color (1) */
-$color-secondary-1-1: rgba(121, 222, 116, 1);
-$color-secondary-1-2: rgba(105, 197, 100, 1);
-$color-secondary-1-3: rgba(42, 95, 39, 1);
-$color-secondary-1-4: rgba(25, 61, 23, 1);
-
-$color-secondary-2-0: rgba(64, 71, 122, 1); // Main Secondary color (2) */
-$color-secondary-2-1: rgba(117, 127, 200, 1);
-$color-secondary-2-2: rgba(96, 104, 167, 1);
-$color-secondary-2-3: rgba(40, 44, 81, 1);
-$color-secondary-2-4: rgba(24, 27, 52, 1);
+$color-primary: rgba(64, 71, 122, 1); // Main Secondary color (2) */
+$color-accent-1: rgba(117, 127, 200, 1);
+$color-accent-2: #6068a7;
+$color-accent-3: rgba(40, 44, 81, 1);
+$color-secondary: rgba(24, 27, 52, 1);
 
 $text-color: #efefef;
-$visor-bottom-radius: 2rem;
-$visor-background: $color-secondary-2-4;
+
 $default-typeface: 'Questrial', sans-serif;
+$react-grid-placeholder-color: $color-secondary;
 
+$menu-container-background-color: $color-primary;
+$menu-container-title-container-width: 15%;
 $menu-container-title-font: $default-typeface;
-$menu-container-title-container-width: 10%;
 $menu-container-list-width: calc(100%-$menu-container-title-container-width);
-
+$menu-item-container-background-color-hover: $color-secondary;
 $menu-item-font: $default-typeface;
-
 $menu-selector-font: $default-typeface;
+$menu-window-ratio: 2;
+
+$visor-bottom-radius: 2rem;
+$visor-background: $color-secondary;
 
 $window-bg-color: white;
+$window-body-text: $default-typeface;
+$window-body-bg-color: rgba($color-primary, 0.75);
+$window-body-height: calc(100% - 2.4rem);
 $window-bottom-radius: 1.1rem;
-
-$window-header-text: $default-typeface;
+$window-button-disabled-bg-color: rgba($text-color, 0.3);
+$window-button-transition: opacity 0.3s linear;
+$window-container-font-size: 1em;
+$window-container-margin: 0.5rem;
 $window-header-bg-color: rgba(
-    $color: $color-secondary-2-0,
+    $color: $color-primary,
     $alpha: 0.9,
 );
-$window-header-buttons-height: 2.41rem;
 $window-header-buttons-bg-color: rgba(
-    $color: $color-secondary-2-0,
+    $color: $color-primary,
     $alpha: 0,
 );
+$window-header-buttons-height: 2.41rem;
 $window-header-buttons-opacity: 1;
+$window-header-buttons-width: 5rem;
 $window-header-button-disabled-opacity: 0.2;
-$window-button-transition: opacity 0.3s linear;
-$window-button-disabled-bg-color: rgba($text-color, 0.3);
-$window-body-text: $default-typeface;
-$window-body-bg-color: rgba($color-secondary-2-0, 0.75);
+$window-header-button-hover-bg-color: rgba($color-secondary, 0.25);
+$window-header-button-pinned-opacity: 0.75;
+$window-header-text: $default-typeface;
+$window-resize-handle-opacity: 0.3;
+$window-title-margin-left: 0.5rem;
+$window-title-label-margin-left: 0.5rem;
+
+$menu-selector-label-margin-left: $menu-window-ratio *
+    $window-title-label-margin-left;
+$menu-container-title-container-margin-left: $menu-window-ratio *
+    $window-title-margin-left;
+$menu-container-font-size: $menu-window-ratio * $window-container-font-size;
+$menu-height: $menu-window-ratio * $window-header-buttons-height;
+$menu-container-list-height: $menu-window-ratio * $window-header-buttons-height;
+$menu-container-list-width: 100%-$menu-container-title-container-width;
+
+$window-body-border-bottom-radius: $window-bottom-radius - 0.1rem;

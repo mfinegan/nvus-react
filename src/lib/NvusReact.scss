@@ -2,12 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
 
 .icon-container {
-    object-fit: contain;
-    width: 1rem;
     margin: auto;
     img,
     FontAwesomeIcon {
-        width: inherit;
+        object-fit: contain;
+        width: 1rem;
         margin: auto;
     }
 }

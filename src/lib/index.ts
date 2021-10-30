@@ -1,3 +1,3 @@
-import Layout from './Layout'
+import NvusReact from './NvusReact'
 
-export { Layout }
+export { NvusReact }

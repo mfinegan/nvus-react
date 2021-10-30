@@ -11,8 +11,10 @@
     }
 
     .menu-selector-label {
-        margin: auto;
-        display: inline-flex;
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-left: $menu-selector-label-margin-left;
+        display: block;
         font-family: $menu-selector-font;
     }
 }

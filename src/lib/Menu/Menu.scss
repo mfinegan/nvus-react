@@ -1,36 +1,37 @@
 @import './../theme';
 .menu-container {
-    background-color: $color-secondary-2-0;
+    background-color: $menu-container-background-color;
     display: flex;
+    height: $menu-height;
 
     .menu-container-title-container {
         display: inline-flex;
         margin: auto;
-        font-size: 1.5em;
-        margin-left: 1.5rem;
+        font-size: $menu-container-font-size;
+        margin-left: $menu-container-title-container-margin-left;
         color: $text-color;
         width: $menu-container-title-container-width;
 
         .menu-container-title-container-title {
-            margin: auto;
+            margin-left: auto;
             font-family: $menu-container-title-font;
         }
     }
 
     .menu-container-list {
+        height: $menu-container-list-height;
         list-style: none;
         display: inline-flex;
-        width: 100%-$menu-container-title-container-width;
+        width: $menu-container-list-width;
         font-weight: bolder;
-        height: -webkit-fill-available;
+        margin-block-start: 0;
+        margin-block-end: 0;
 
         .menu-container-list-item {
             margin: auto;
             display: flex;
-
-            .menu-item-container {
-                text-align: center;
-            }
+            height: 100%;
+            width: 9rem;
         }
     }
 }

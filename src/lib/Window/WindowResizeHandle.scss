@@ -10,13 +10,12 @@
     transform: scaleX(-1);
     visibility: visible;
     color: $text-color;
-    opacity: 0.3;
+    opacity: $window-resize-handle-opacity;
     transition: $window-button-transition;
 }
 
 .window-container + .window-resize-handle {
     visibility: hidden;
-    opacity: 0.01;
     transition: $window-button-transition;
 }
 

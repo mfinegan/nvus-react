@@ -1,46 +1,113 @@
-# Getting Started with Create React App
+<h1 align="center">Welcome to @nvus/nvus-react 👋</h1>
+<p>
+  <img alt="Version" src="https://img.shields.io/badge/version- 0.1.0-blue.svg?cacheSeconds=2592000" />
+  <a href="https://www.gnu.org/licenses/gpl-3.0.txt" target="_blank">
+    <img alt="License: GPL--3.0--only" src="https://img.shields.io/badge/License-GPL--3.0--only-yellow.svg" />
+  </a>
+</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> React Component that scaffolds out a basic dashboard layout in a windowed environment.
 
-## Available Scripts
+## The NVUS-React MenuModel
 
-In the project directory, you can run:
+The NVUS-React component takes in a single property: An array of NVUS Menu Models.
 
-### `yarn start`
+Each Menu Model is consists of a title and an array of MenuItems.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Each MenuItem consists of:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+1. title: String The Name of the Component
+2. icon: A ReactNode representing the icon to use alongside the title
+3. child: A ReactNode child that represented the component to render in the body of the window.
 
-### `yarn test`
+If a single Menu Model object is passed in the array, NVUS-React will not render the paging arrows in the menu bar.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+It is the goal of this developer to make this model as open as possible yet there are some items (ex: the icon) where it is preferred to limit the type. However
+the current scope of the project is to produce a minimum viable solution as to solicit feedback and critique from the public at large.
 
-### `yarn build`
+## Install
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```sh
+yarn install @nvus/nvus-react
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Usage
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```jsx
+const mainMenu = [
+    {
+        title: 'Test Title',
+        menuItems: [
+            {
+                label: 'Component A',
+                icon: <FontAwesomeIcon icon={faUser} />,
+                child: <ComponentA></ComponentA>,
+            },
+            {
+                label: 'Component B',
+                icon: <FontAwesomeIcon icon={faMap} />,
+                child: <ComponentB></ComponentB>,
+            },
+        ],
+    },
+    {
+        title: 'Test Title Too',
+        menuItems: [
+            {
+                label: 'Component C',
+                icon: <img src="./logo192.png" alt="" />,
+                child: <ComponentC></ComponentC>,
+            },
+            {
+                label: 'Component D',
+                icon: <FontAwesomeIcon icon={faPlus} />,
+                child: <ComponentD></ComponentD>,
+            },
+        ],
+    },
+]
 
-### `yarn eject`
+return (
+    <div>
+        <NvusReact items={mainMenu} />
+    </div>
+)
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Run tests
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```sh
+yarn run test
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## SASS Variables
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+See ./src/lib/\_theme.scss for a comprehensive list of all the SASS variables used in theming and laying out the components.
 
-## Learn More
+## Author
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+👤 **Michael Finegan, Jr.**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Show your support
+
+Give a ⭐️ if this project helped you!
+
+Tips are appreciated!
+
+BTC: 3KC3rPky6hnkYppKyBJdDFNf2mpDQt7ogq
+
+ETH: 0x5aac680931344A6c588D0624DE1D44987E9330C7
+
+BCH: qzex8w53qmtq5zvxayfm0nmmxprgt4muzc5v8q4cwf
+
+DOGE: DPmNfDWrUeGEUGZAqLSrJ2AozhGQtZXDJZ
+
+SHIB: 0x5a0F9E9F8355CEdBfFEc374Ea86ad5dB9Be594a7
+
+## 📝 License
+
+This project is [GPL--3.0--only](https://www.gnu.org/licenses/gpl-3.0.txt) licensed.
+
+---
+
+_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_

@@ -4,10 +4,11 @@
     border-bottom-left-radius: $window-bottom-radius;
     border-bottom-right-radius: $window-bottom-radius;
     background-color: $window-bg-color;
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
+    margin-left: $window-container-margin;
+    margin-right: $window-container-margin;
     height: 100%;
     width: 100%;
+    font-size: $window-container-font-size;
 
     .window-header {
         font-family: $window-header-text;
@@ -17,20 +18,20 @@
         .window-title {
             margin-top: auto;
             margin-bottom: auto;
-            margin-left: 0.5rem;
+            margin-left: $window-title-margin-left;
             font-weight: lighter;
             color: $text-color;
             display: flex;
             align-items: center;
 
             .window-title-label {
-                margin-left: 0.75rem;
+                margin-left: $window-title-label-margin-left;
             }
         }
 
         .window-header-buttons {
             height: $window-header-buttons-height;
-            width: 5rem;
+            width: $window-header-buttons-width;
             border-radius: 0;
             display: flex;
             margin-left: auto;
@@ -55,11 +56,11 @@
                 }
 
                 &.pinned-active {
-                    opacity: 0.75;
+                    opacity: $window-header-button-pinned-opacity;
                 }
 
                 &:hover {
-                    background-color: rgba($color-secondary-2-4, 0.25);
+                    background-color: $window-header-button-hover-bg-color;
                 }
             }
         }
@@ -74,14 +75,14 @@
         display: block;
         flex-direction: column;
         margin: auto;
-        height: calc(100% - 2.4rem);
-        border-bottom-left-radius: $window-bottom-radius - 0.1rem;
-        border-bottom-right-radius: $window-bottom-radius - 0.1rem;
+        height: $window-body-height;
+        border-bottom-left-radius: $window-body-border-bottom-radius;
+        border-bottom-right-radius: $window-body-border-bottom-radius;
     }
 }
 
 .react-grid-placeholder {
-    background-color: $color-secondary-2-4;
+    color: $react-grid-placeholder-color;
     border-bottom-left-radius: $window-bottom-radius;
     border-bottom-right-radius: $window-bottom-radius;
 }

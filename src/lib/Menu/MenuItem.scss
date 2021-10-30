@@ -4,9 +4,15 @@
     border-radius: 0.25rem;
     cursor: pointer;
     color: $text-color;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: center;
+    width: inherit;
+    height: 4.5rem;
+
     &:hover {
         filter: opacity(1);
-        background: $color-secondary-2-3;
+        background: $menu-item-container-background-color-hover;
     }
 
     svg,
@@ -15,7 +21,13 @@
         margin: auto;
     }
 
-    .menu-item-label {
-        font-family: $menu-item-font;
+    .menu-item-button-label-container {
+        height: 100%;
+        display: flex;
+        text-align: center;
+        .menu-item-label {
+            font-family: $menu-item-font;
+            margin: auto;
+        }
     }
 }

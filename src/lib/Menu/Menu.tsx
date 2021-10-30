@@ -11,6 +11,7 @@ type MenuProps = {
 
     onArrowClick: (dir: MenuDirection, title: string) => void
     windowOpen: (key: string) => void
+    hasArrows: boolean
 }
 
 const GenerateElement = (el: MenuItemProps, onClick: (key: string) => void) => {
@@ -33,6 +34,7 @@ function Menu(props: MenuProps) {
                 <MenuSelector
                     onArrowClick={props.onArrowClick}
                     title={props.title}
+                    hasArrows={props.hasArrows}
                 />
             </div>
             <ul className={'menu-container-list'}>

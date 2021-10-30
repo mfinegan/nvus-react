@@ -22,8 +22,12 @@ function MenuItem(props: MenuItemProps) {
                 if (props.onClick) props.onClick(props.label)
             }}
         >
-            <div className="icon-container"> {props.icon} </div>
-            <span className="menu-item-label">{props.label.toUpperCase()}</span>
+            <div className="menu-item-button-label-container">
+                <div className="icon-container"> {props.icon} </div>
+                <span className="menu-item-label">
+                    {props.label.toUpperCase()}
+                </span>
+            </div>
         </div>
     )
 }

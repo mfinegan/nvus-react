@@ -3,14 +3,14 @@ import Visor from './Visor'
 import useLayout from './Hooks/useLayout'
 import { MenuItemProps } from './Menu/MenuItem'
 import Menu from './Menu/Menu'
-import './Layout.scss'
+import './NvusReact.scss'
 
 interface NVUSMenu {
     title: string
     menuItems: MenuItemProps[]
 }
 
-type LayoutProps = {
+type NvusReactProps = {
     /** Array of MenuItems to render */
     items: NVUSMenu[]
 }
@@ -18,7 +18,7 @@ type LayoutProps = {
 /**
  * High-level wrapper component that contains the core components that drive the windowing environment
  */
-function Layout(props: LayoutProps) {
+function NvusReact(props: NvusReactProps) {
     const menuMap: Map<string, MenuItemProps[]> = new Map<
         string,
         MenuItemProps[]
@@ -46,10 +46,11 @@ function Layout(props: LayoutProps) {
                 items={menuItems}
                 onArrowClick={onArrowClick}
                 windowOpen={openWindow}
+                hasArrows={menuMap.size > 1}
             />
             <Visor items={items} onClosed={closeWindow} onPinned={pinWindow} />
         </div>
     )
 }
 
-export default Layout
+export default NvusReact

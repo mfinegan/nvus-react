@@ -10,25 +10,28 @@ export enum MenuDirection {
 interface MenuSelectorProps {
     title: string
     onArrowClick: (dir: MenuDirection, title: string) => void
+    hasArrows: boolean
 }
 
 function MenuSelector(props: MenuSelectorProps) {
     return (
         <div className="menu-selector-container">
-            <div className="menu-selector-icons">
-                <FontAwesomeIcon
-                    icon={faCaretUp}
-                    onClick={() =>
-                        props.onArrowClick(MenuDirection.Up, props.title)
-                    }
-                ></FontAwesomeIcon>
-                <FontAwesomeIcon
-                    icon={faCaretDown}
-                    onClick={() =>
-                        props.onArrowClick(MenuDirection.Down, props.title)
-                    }
-                ></FontAwesomeIcon>
-            </div>
+            {props.hasArrows && (
+                <div className="menu-selector-icons">
+                    <FontAwesomeIcon
+                        icon={faCaretUp}
+                        onClick={() =>
+                            props.onArrowClick(MenuDirection.Up, props.title)
+                        }
+                    ></FontAwesomeIcon>
+                    <FontAwesomeIcon
+                        icon={faCaretDown}
+                        onClick={() =>
+                            props.onArrowClick(MenuDirection.Down, props.title)
+                        }
+                    ></FontAwesomeIcon>
+                </div>
+            )}
             <div className="menu-selector-label">
                 <span className="menu-selector-title">{props.title}</span>
             </div>

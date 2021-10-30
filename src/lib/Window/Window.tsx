@@ -61,7 +61,7 @@ function Window({ title, child, layout, onPinned, onClosed }: WindowProps) {
                 !isPinned ? 'window-container draggable ' : ' window-container'
             }
         >
-            <div className="window-header p-d-flex">
+            <div className="window-header ">
                 <div className="window-title">
                     <div className="icon-container">{layout.icon} </div>
                     <span className="window-title-label">
