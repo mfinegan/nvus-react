@@ -19,7 +19,7 @@ export interface NvusReactProps {
 /**
  * High-level wrapper component that contains the core components that drive the windowing environment
  */
-function NvusReact(props: NvusReactProps) : ReactElement {
+function NvusReact(props: NvusReactProps): ReactElement {
     const menuMap: Map<string, MenuItemProps[]> = new Map<
         string,
         MenuItemProps[]
@@ -54,4 +54,4 @@ function NvusReact(props: NvusReactProps) : ReactElement {
     )
 }
 
-export default NvusReact;
+export default NvusReact

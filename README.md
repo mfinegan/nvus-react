@@ -28,16 +28,19 @@ the current scope of the project is to produce a minimum viable solution as to s
 ## Install
 
 ### 1. Install from NPM/Yarn
+
 ```sh
 yarn install @nvus/nvus-react
 ```
 
 ### 2. Create local typings file and place in directory 'typings'
+
 ```sh
 declare module '@nvus/nvus-react';
 ```
 
 ### 3. Import typings file into tsconfig.json
+
 ```json
 {
   "compilerOptions": {
@@ -49,8 +52,7 @@ declare module '@nvus/nvus-react';
   },
 ```
 
-Steps 2 and 3 are short-term measures until package types are accepted into @types. 
-
+Steps 2 and 3 are short-term measures until package types are accepted into @types.
 
 ## Usage
 
@@ -103,7 +105,7 @@ yarn run test
 
 ## SASS Variables
 
-See _theme.scss for a comprehensive list of all the SASS variables used in theming and laying out the components.
+See \_theme.scss for a comprehensive list of all the SASS variables used in theming and laying out the components.
 
 ## Author
 

@@ -17,6 +17,11 @@
         "jsx": "react-jsx",
         "declaration": true
     },
-    "include": ["src/lib", "eslintrc.json", "src/*.tsx", "src/*.ts", "index.tsx"],
-    
+    "include": [
+        "src/lib",
+        "eslintrc.json",
+        "src/*.tsx",
+        "src/*.ts",
+        "index.tsx"
+    ]
 }

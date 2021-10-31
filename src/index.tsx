@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { NvusReact }  from './lib'
+import { NvusReact } from './lib'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import { faUser, faMap, faPlus } from '@fortawesome/free-solid-svg-icons'
 import ComponentA from './components/componenta'
@@ -49,5 +49,3 @@ const App = () => {
         </div>
     )
 }
-
-
