@@ -1,6 +1,6 @@
 <h1 align="center">Welcome to @nvus/nvus-react 👋</h1>
 <p>
-  <img alt="Version" src="https://img.shields.io/badge/version- 0.1.2-blue.svg?cacheSeconds=2592000" />
+  <img alt="Version" src="https://img.shields.io/badge/version- 0.2.1-blue.svg?cacheSeconds=2592000" />
   <a href="https://www.gnu.org/licenses/gpl-3.0.txt" target="_blank">
     <img alt="License: GPL--3.0--only" src="https://img.shields.io/badge/License-GPL--3.0--only-yellow.svg" />
   </a>
@@ -27,9 +27,30 @@ the current scope of the project is to produce a minimum viable solution as to s
 
 ## Install
 
+### 1. Install from NPM/Yarn
 ```sh
 yarn install @nvus/nvus-react
 ```
+
+### 2. Create local typings file and place in directory 'typings'
+```sh
+declare module '@nvus/nvus-react';
+```
+
+### 3. Import typings file into tsconfig.json
+```json
+{
+  "compilerOptions": {
+    ...
+    "typeRoots": [
+      "./node_modules/@types/",
+      "./typings"
+    ]
+  },
+```
+
+Steps 2 and 3 are short-term measures until package types are accepted into @types. 
+
 
 ## Usage
 
@@ -82,7 +103,7 @@ yarn run test
 
 ## SASS Variables
 
-See ./src/lib/\_theme.scss for a comprehensive list of all the SASS variables used in theming and laying out the components.
+See _theme.scss for a comprehensive list of all the SASS variables used in theming and laying out the components.
 
 ## Author
 

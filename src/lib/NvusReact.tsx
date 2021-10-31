@@ -1,16 +1,17 @@
-import React from 'react'
+import React, { ReactElement } from 'react'
 import Visor from './Visor'
 import useLayout from './Hooks/useLayout'
 import { MenuItemProps } from './Menu/MenuItem'
 import Menu from './Menu/Menu'
 import './NvusReact.scss'
+import { JsxElement } from 'typescript'
 
 interface NVUSMenu {
     title: string
     menuItems: MenuItemProps[]
 }
 
-type NvusReactProps = {
+export interface NvusReactProps {
     /** Array of MenuItems to render */
     items: NVUSMenu[]
 }
@@ -18,7 +19,7 @@ type NvusReactProps = {
 /**
  * High-level wrapper component that contains the core components that drive the windowing environment
  */
-function NvusReact(props: NvusReactProps) {
+function NvusReact(props: NvusReactProps) : ReactElement {
     const menuMap: Map<string, MenuItemProps[]> = new Map<
         string,
         MenuItemProps[]
@@ -53,4 +54,4 @@ function NvusReact(props: NvusReactProps) {
     )
 }
 
-export default NvusReact
+export default NvusReact;

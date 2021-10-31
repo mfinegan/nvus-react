@@ -12,7 +12,7 @@ $react-grid-placeholder-color: $color-secondary;
 $menu-container-background-color: $color-primary;
 $menu-container-title-container-width: 15%;
 $menu-container-title-font: $default-typeface;
-$menu-container-list-width: calc(100%-$menu-container-title-container-width);
+
 $menu-item-container-background-color-hover: $color-secondary;
 $menu-item-font: $default-typeface;
 $menu-selector-font: $default-typeface;
@@ -56,6 +56,6 @@ $menu-container-title-container-margin-left: $menu-window-ratio *
 $menu-container-font-size: $menu-window-ratio * $window-container-font-size;
 $menu-height: $menu-window-ratio * $window-header-buttons-height;
 $menu-container-list-height: $menu-window-ratio * $window-header-buttons-height;
-$menu-container-list-width: 100%-$menu-container-title-container-width;
+$menu-container-list-width: 100% - $menu-container-title-container-width;
 
 $window-body-border-bottom-radius: $window-bottom-radius - 0.1rem;
