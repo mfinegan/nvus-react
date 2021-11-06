@@ -1,6 +1,6 @@
 <h1 align="center">Welcome to @nvus/nvus-react 👋</h1>
 <p>
-  <img alt="Version" src="https://img.shields.io/badge/version- 0.2.1-blue.svg?cacheSeconds=2592000" />
+  <img alt="Version" src="https://img.shields.io/badge/version- 0.2.2-blue.svg?cacheSeconds=2592000" />
   <a href="https://www.gnu.org/licenses/gpl-3.0.txt" target="_blank">
     <img alt="License: GPL--3.0--only" src="https://img.shields.io/badge/License-GPL--3.0--only-yellow.svg" />
   </a>
@@ -129,7 +129,7 @@ SHIB: 0x5a0F9E9F8355CEdBfFEc374Ea86ad5dB9Be594a7
 
 ## 📝 License
 
-This project is [GPL--3.0--only](https://www.gnu.org/licenses/gpl-3.0.txt) licensed.
+This project is [GPL v3.0](https://www.gnu.org/licenses/gpl-3.0.txt) licensed.
 
 ---
 

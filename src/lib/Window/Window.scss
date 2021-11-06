@@ -79,11 +79,10 @@
         border-bottom-left-radius: $window-body-border-bottom-radius;
         border-bottom-right-radius: $window-body-border-bottom-radius;
 
-        .window-body-content{
-            margin:auto;
-            height:85%;
+        .window-body-content {
+            margin: auto;
+            height: 85%;
             overflow: auto;
-
         }
     }
 }
