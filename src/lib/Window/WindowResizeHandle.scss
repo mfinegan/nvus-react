@@ -1,6 +1,6 @@
 @import '../theme';
 
-.window-container.draggable + .window-resize-handle {
+.window-container.resizeable + .window-resize-handle {
     background: transparent;
     position: absolute;
     bottom: 0.25rem;
