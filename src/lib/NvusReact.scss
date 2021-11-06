@@ -1,5 +1,6 @@
 @import url('@fortawesome/fontawesome-svg-core/styles.css');
 @import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+@import './_theme.scss';
 
 .icon-container {
     margin: auto;
@@ -10,3 +11,22 @@
         margin: auto;
     }
 }
+
+::-webkit-scrollbar {
+    width: 3px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: $color-accent-1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: $color-accent-3;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background:$color-secondary;
+  }
