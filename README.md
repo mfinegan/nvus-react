@@ -4,7 +4,7 @@
   <img alt="Version" src="https://img.shields.io/badge/version- 0.2.2-blue.svg?cacheSeconds=2592000" />
 
   <a href="https://www.gnu.org/licenses/gpl-3.0.txt" target="_blank">
-    <img alt="License: GPL 3.0" src="https://img.shields.io/badge/License-GPL--3.0--only-yellow.svg" />
+    <img alt="License: GPL 3.0" src="https://img.shields.io/badge/License-GPL--3.0-yellow.svg" />
   </a>
 </p>
 
