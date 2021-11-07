@@ -1,0 +1,7 @@
+Release 0.2.2
+
+-Made Window Header the only sub component capable of initializing the click/drag features.
+
+-Made body of window a scroll-pane when content exceeds the height of the window.
+
+-Added Changelog

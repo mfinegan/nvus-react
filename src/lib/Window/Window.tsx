@@ -58,10 +58,14 @@ function Window({ title, child, layout, onPinned, onClosed }: WindowProps) {
     return (
         <div
             className={
-                !isPinned ? 'window-container draggable ' : ' window-container'
+                !isPinned ? 'window-container resizeable' : 'window-container'
             }
         >
-            <div className="window-header ">
+            <div
+                className={
+                    !isPinned ? 'window-header draggable ' : ' window-header'
+                }
+            >
                 <div className="window-title">
                     <div className="icon-container">{layout.icon} </div>
                     <span className="window-title-label">

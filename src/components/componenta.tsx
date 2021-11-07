@@ -4,6 +4,31 @@ function ComponentA() {
     return (
         <div>
             <span>Component A!</span>
+            <br />
+            <span>Component A!</span>
+            <br />
+            <span>Component A!</span>
+            <br />
+            <span>Component A!</span>
+            <br />
+            <span>Component A!</span>
+            <br />
+            <span>Component A!</span>
+            <br />
+            <span>Component A!</span>
+            <br />
+            <span>Component A!</span>
+            <br />
+            <span>Component A!</span>
+            <br />
+            <span>Component A!</span>
+            <br />
+            <span>Component A!</span>
+            <br />
+            <span>Component A!</span>
+            <br />
+            <span>Component A!</span>
+            <br />
         </div>
     )
 }
