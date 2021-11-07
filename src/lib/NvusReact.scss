@@ -18,15 +18,15 @@
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background: $color-accent-1;
+    background: $scrollbar-track-color;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: $color-accent-3;
+    background: $scrollbar-thumb;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: $color-secondary;
+    background: $scrollbar-thumb-hover;
 }
