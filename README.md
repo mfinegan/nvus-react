@@ -2,7 +2,7 @@
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version- 0.2.2-blue.svg?cacheSeconds=2592000" />
   <a href="https://www.gnu.org/licenses/gpl-3.0.txt" target="_blank">
-    <img alt="License: GPL--3.0--only" src="https://img.shields.io/badge/License-GPL--3.0--only-yellow.svg" />
+    <img alt="License: GPL--3.0--only" src="https://img.shields.io/badge/License-GPL--3.0-yellow.svg" />
   </a>
 </p>
 
@@ -19,6 +19,11 @@ Each MenuItem consists of:
 1. title: String The Name of the Component
 2. icon: A ReactNode representing the icon to use alongside the title
 3. child: A ReactNode child that represented the component to render in the body of the window.
+4. optionalParams: An object that represents optional window properties to override.
+    1. minW?: The minimum width of the window
+    2. minH?: The minimum height of the window
+    3. width?: The width of the window at open
+    4. height?: The height of the window at open
 
 If a single Menu Model object is passed in the array, NVUS-React will not render the paging arrows in the menu bar.
 
@@ -30,7 +35,7 @@ the current scope of the project is to produce a minimum viable solution as to s
 ### 1. Install from NPM/Yarn
 
 ```sh
-yarn install @nvus/nvus-react
+yarn add @nvus/nvus-react
 ```
 
 ### 2. Create local typings file and place in directory 'typings'
