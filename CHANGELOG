@@ -5,3 +5,5 @@ Release 0.2.2
 -Made body of window a scroll-pane when content exceeds the height of the window.
 
 -Added Changelog
+
+-Added Contributing.md

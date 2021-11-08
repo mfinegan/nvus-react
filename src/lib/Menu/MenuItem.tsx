@@ -11,7 +11,20 @@ export type MenuItemProps = {
     /** Function Callback for when Pinned Action is executed */
     onClick?: (key: string) => void
 
-    child: React.ReactNode
+    child: JSX.Element
+
+    optionalParams?: OptionalWindowParameters
+}
+
+export type OptionalWindowParameters = {
+    minX?: number
+
+    minY?: number
+
+    width?: number
+
+    height?: number
+
 }
 
 function MenuItem(props: MenuItemProps) {

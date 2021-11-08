@@ -4,7 +4,6 @@ import useLayout from './Hooks/useLayout'
 import { MenuItemProps } from './Menu/MenuItem'
 import Menu from './Menu/Menu'
 import './NvusReact.scss'
-import { JsxElement } from 'typescript'
 
 interface NVUSMenu {
     title: string
