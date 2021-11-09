@@ -24,7 +24,6 @@ export type OptionalWindowParameters = {
     width?: number
 
     height?: number
-
 }
 
 function MenuItem(props: MenuItemProps) {

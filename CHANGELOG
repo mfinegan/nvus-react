@@ -1,3 +1,11 @@
+Release 0.2.3
+
+-Added "optionalParams" property to NVUS Menu Model.  Through this property one can specify the initial and minimum width and height of a window (in grid units)
+
+-Revised "useLayout" hook to "useNvusReact" to better reflect which component uses the hook 
+
+-Modified Readme to account for changes to NVUS Menu Model as well as revising install instructions.
+
 Release 0.2.2
 
 -Made Window Header the only sub component capable of initializing the click/drag features.

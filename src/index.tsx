@@ -19,9 +19,8 @@ const App = () => {
                     icon: <FontAwesomeIcon icon={faUser} />,
                     child: <ComponentA></ComponentA>,
                     optionalParams: {
-                        height: 4
-                    }
-            
+                        height: 4,
+                    },
                 },
                 {
                     label: 'Component B',
@@ -29,9 +28,8 @@ const App = () => {
                     child: <ComponentB></ComponentB>,
                     optionalParams: {
                         height: 9,
-                        width: 7
-                    }
-                    
+                        width: 7,
+                    },
                 },
             ],
         },

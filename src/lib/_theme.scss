@@ -32,11 +32,11 @@ $window-container-font-size: 1em;
 $window-container-margin: 0.5rem;
 $window-header-bg-color: rgba(
     $color: $color-primary,
-    $alpha: 0.9
+    $alpha: 0.9,
 );
 $window-header-buttons-bg-color: rgba(
     $color: $color-primary,
-    $alpha: 0
+    $alpha: 0,
 );
 $window-header-buttons-height: 2.41rem;
 $window-header-buttons-opacity: 1;
@@ -62,4 +62,4 @@ $window-body-border-bottom-radius: $window-bottom-radius - 0.1rem;
 
 $scrollbar-track-color: rgba($color-accent-1, 0.25);
 $scrollbar-thumb: $color-accent-3;
-$scrollbar-thumb-hover:$color-secondary;
+$scrollbar-thumb-hover: $color-secondary;

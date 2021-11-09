@@ -39,10 +39,18 @@ export default function useNvusReact(menuMap: Map<string, MenuItemProps[]>) {
                     i: keyStr,
                     x: 1,
                     y: 1,
-                    w: item.optionalParams?.width? item.optionalParams.width: 4,
-                    h: item.optionalParams?.height? item.optionalParams.height: 6,
-                    minW: item.optionalParams?.minX? item.optionalParams.minX : 2,
-                    minH: item.optionalParams?.minY? item.optionalParams.minY : 4,
+                    w: item.optionalParams?.width
+                        ? item.optionalParams.width
+                        : 4,
+                    h: item.optionalParams?.height
+                        ? item.optionalParams.height
+                        : 6,
+                    minW: item.optionalParams?.minX
+                        ? item.optionalParams.minX
+                        : 2,
+                    minH: item.optionalParams?.minY
+                        ? item.optionalParams.minY
+                        : 4,
                     static: false,
                     child: item.child,
                     icon: item.icon,
