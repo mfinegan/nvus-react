@@ -12,7 +12,7 @@ function mod(n: number, m: number) {
     return ((n % m) + m) % m
 }
 
-export default function useLayout(menuMap: Map<string, MenuItemProps[]>) {
+export default function useNvusReact(menuMap: Map<string, MenuItemProps[]>) {
     const [items, setItems] = useState<ReactGridLayoutComponent[]>([])
     const [menuItems, setMenuItems] = useState<MenuItemProps[]>(
         Array.from(menuMap.values())[0] as MenuItemProps[]

@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react'
 import Visor from './Visor'
-import useLayout from './Hooks/useLayout'
+import useNvusReact from './Hooks/useNvusReact'
 import { MenuItemProps } from './Menu/MenuItem'
 import Menu from './Menu/Menu'
 import './NvusReact.scss'
@@ -37,7 +37,7 @@ function NvusReact(props: NvusReactProps): ReactElement {
         onArrowClick,
         menuItems,
         items,
-    } = useLayout(menuMap)
+    } = useNvusReact(menuMap)
 
     return (
         <div className="layout-container">
