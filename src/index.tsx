@@ -18,11 +18,18 @@ const App = () => {
                     label: 'Component A',
                     icon: <FontAwesomeIcon icon={faUser} />,
                     child: <ComponentA></ComponentA>,
+                    optionalParams: {
+                        height: 4,
+                    },
                 },
                 {
                     label: 'Component B',
                     icon: <FontAwesomeIcon icon={faMap} />,
                     child: <ComponentB></ComponentB>,
+                    optionalParams: {
+                        height: 9,
+                        width: 7,
+                    },
                 },
             ],
         },
